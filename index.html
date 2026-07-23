@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Softnix Logger CYBOT — ผู้ช่วยอัจฉริยะด้าน IT & Cyber Security แบบ On-Premise AI Appliance</title>
+<meta name="description" content="Softnix Logger CYBOT ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์แบบ Agentic AI ทำงานภายในองค์กร 100% รวม Log Management มาตรฐาน NTS 4003.1-2560, ตรวจช่องโหว่, เฝ้าระวังเชิงรุก และบริหารทรัพย์สิน IT ในอุปกรณ์เดียว">
+<meta property="og:title" content="Softnix Logger CYBOT — Your Intelligent IT & Cyber Assistant">
+<meta property="og:description" content="Secure. Compliant. Intelligent. Automated. — On-Premise Agentic AI Appliance for Log Management, Security, Monitoring and IT Inventory.">
+<meta property="og:image" content="assets/img/mascot-circle.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/img/mascot-circle.png" alt="CYBOT Mascot" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">Softnix Logger</span>
+        <span class="brand-sub">CYBOT</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#overview"    class="nav-link" data-i18n="nav.overview">ภาพรวม</a>
+      <a href="#ai"          class="nav-link" data-i18n="nav.ai">AI ผู้ช่วย</a>
+      <a href="#security"    class="nav-link" data-i18n="nav.security">ความปลอดภัย</a>
+      <a href="#monitoring"  class="nav-link" data-i18n="nav.monitoring">มอนิเตอร์</a>
+      <a href="#logs"        class="nav-link" data-i18n="nav.logs">Log Management</a>
+      <a href="#compliance"  class="nav-link" data-i18n="nav.compliance">Compliance</a>
+      <a href="#specs"       class="nav-link" data-i18n="nav.specs">สเปค</a>
+      <div class="nav-mobile-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="th" class="lang-btn active">TH</button>
+          <button type="button" data-lang="en" class="lang-btn">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">ขอ Demo</a>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="th" class="lang-btn active">TH</button>
+        <button type="button" data-lang="en" class="lang-btn">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">ขอ Demo</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-glow glow-a"></div>
+    <div class="hero-glow glow-b"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        <span data-i18n="hero.badge">On-Premise AI Appliance</span>
+      </span>
+      <h1 class="hero-title reveal">
+        <span class="hero-title-line">Softnix Logger</span>
+        <span class="hero-title-grad">CYBOT</span>
+      </h1>
+      <p class="hero-tagline reveal" data-i18n="hero.tagline">ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์ขององค์กรคุณ</p>
+      <p class="hero-slogan reveal">Secure. Compliant. Intelligent. Automated.</p>
+      <p class="hero-lead reveal" data-i18n="hero.lead">ผู้ช่วยอัจฉริยะแบบ Agentic AI ที่ทำงานภายในองค์กร 100% (On-Premise) รวมระบบจัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560, การตรวจสอบช่องโหว่, การเฝ้าระวังเชิงรุก และการบริหารทรัพย์สิน IT ไว้ในอุปกรณ์เดียว — สนทนาและสั่งงานด้วยภาษาไทย-อังกฤษได้ทันที</p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">
+          <span data-i18n="hero.cta1">ขอ Demo / ใบเสนอราคา</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost" id="datasheetBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+          <span data-i18n="hero.cta2">ดาวน์โหลด Datasheet</span>
+        </a>
+      </div>
+      <dl class="hero-stats reveal">
+        <div class="stat">
+          <dt class="stat-num"><span class="count" data-count="7000">0</span>+</dt>
+          <dd class="stat-label" data-i18n="hero.stat1">Events/วินาที (EPS)</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-num" data-i18n="hero.stat2num">ไม่จำกัด</dt>
+          <dd class="stat-label" data-i18n="hero.stat2">Device &amp; Volume</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-num">100%</dt>
+          <dd class="stat-label" data-i18n="hero.stat3">On-Premise ข้อมูลไม่ออกนอกองค์กร</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-num"><span class="count" data-count="7">0</span> <span data-i18n="hero.stat4num">มาตรฐาน</span></dt>
+          <dd class="stat-label" data-i18n="hero.stat4">PDPA · ISO 27001 · NIST · PCI-DSS · GDPR</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-mascot-wrap">
+        <div class="hero-mascot-ring" aria-hidden="true"></div>
+        <img src="assets/img/mascot-circle.png" alt="CYBOT — AI Robot Cyber Security Mascot" class="hero-mascot">
+      </div>
+      <div class="hero-chip chip-a"><span class="chip-dot"></span><span data-i18n="hero.chip1">Agentic AI — เข้าใจ วางแผน ลงมือทำ</span></div>
+      <div class="hero-chip chip-b"><span class="chip-dot ok"></span><span data-i18n="hero.chip2">Human-in-the-Loop</span></div>
+    </div>
+  </div>
+  <div class="container hero-shot reveal">
+    <figure class="shot">
+      <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+        <span class="shot-bar"><i></i><i></i><i></i><em>CYBOT Console</em></span>
+        <img src="assets/img/shot-ai-welcome.jpg" alt="CYBOT AI Assistant welcome screen — Secure, Compliant, Intelligent, Automated" loading="lazy">
+      </button>
+      <figcaption data-i18n="hero.shotcap">CYBOT Console — พร้อมรับคำถามและสั่งงานด้วยภาษาคน “Ask CyBot Anything…”</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════ STANDARDS MARQUEE ══════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>NTS 4003.1-2560</span><i>◆</i><span>PDPA</span><i>◆</i><span>ISO 27001</span><i>◆</i><span>NIST CSF</span><i>◆</i><span>PCI-DSS</span><i>◆</i><span>GDPR</span><i>◆</i><span>พ.ร.บ.ความมั่นคงปลอดภัยไซเบอร์</span><i>◆</i><span>พ.ร.บ.คอมพิวเตอร์</span><i>◆</i>
+    <span>NTS 4003.1-2560</span><i>◆</i><span>PDPA</span><i>◆</i><span>ISO 27001</span><i>◆</i><span>NIST CSF</span><i>◆</i><span>PCI-DSS</span><i>◆</i><span>GDPR</span><i>◆</i><span>พ.ร.บ.ความมั่นคงปลอดภัยไซเบอร์</span><i>◆</i><span>พ.ร.บ.คอมพิวเตอร์</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════════ OVERVIEW ══════════════ -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="ov.label">Product Overview</span>
+      <h2 class="section-title" data-i18n="ov.title">จาก Tool-Based IT สู่ AI-Assisted IT</h2>
+      <p class="section-lead" data-i18n="ov.lead">องค์กรในปัจจุบันเผชิญกับ Log และเหตุการณ์ด้านความปลอดภัยจำนวนมหาศาล แต่ทีม IT มีเวลาจำกัด CYBOT ทำหน้าที่เป็นเพื่อนร่วมทีม (AI Buddy) ที่เข้าใจบริบท ให้เหตุผล และลงมือทำงานแทนได้ ภายใต้การกำกับของมนุษย์ (Human-in-the-Loop)</p>
+    </div>
+
+    <div class="grid grid-4">
+      <article class="card feature-card reveal">
+        <span class="feature-num">01</span>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg>
+        </div>
+        <h3 data-i18n="ov.f1t">IT Inventory</h3>
+        <p data-i18n="ov.f1d">บันทึกทะเบียนอุปกรณ์และซอฟต์แวร์ พร้อมแจ้งเตือนเมื่อ License หรือ MA ใกล้หมดอายุ</p>
+      </article>
+      <article class="card feature-card reveal">
+        <span class="feature-num">02</span>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 data-i18n="ov.f2t">Security</h3>
+        <p data-i18n="ov.f2d">ตรวจสอบความปลอดภัยและ Scan ช่องโหว่ พร้อมแนวทางแก้ไข ทำหน้าที่เป็นที่ปรึกษาระดับมืออาชีพ</p>
+      </article>
+      <article class="card feature-card reveal">
+        <span class="feature-num">03</span>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="2.8"/><path d="M4 5.5v6c0 1.5 3.6 2.8 8 2.8s8-1.3 8-2.8v-6"/><path d="M4 11.5v6c0 1.5 3.6 2.8 8 2.8s8-1.3 8-2.8v-6"/></svg>
+        </div>
+        <h3 data-i18n="ov.f3t">Log Compliance</h3>
+        <p data-i18n="ov.f3d">จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560 รองรับ พ.ร.บ.คอมพิวเตอร์, PDPA และ ISO 27001</p>
+      </article>
+      <article class="card feature-card reveal">
+        <span class="feature-num">04</span>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
+        </div>
+        <h3 data-i18n="ov.f4t">Proactive Monitor</h3>
+        <p data-i18n="ov.f4d">เฝ้าสังเกตระบบ IT แจ้งเตือนทันทีโดยไม่ต้องรอคำสั่ง พร้อมคำอธิบายวิธีแก้ปัญหา</p>
+      </article>
+    </div>
+
+    <!-- Agentic loop -->
+    <div class="loop reveal">
+      <h3 class="loop-title" data-i18n="ov.looptitle">วงจรการทำงานแบบ Agentic AI</h3>
+      <ol class="loop-steps">
+        <li class="loop-step">
+          <span class="loop-num">1</span>
+          <h4 data-i18n="ov.l1t">Collect &amp; Observe</h4>
+          <p data-i18n="ov.l1d">เก็บและเฝ้าสังเกตสภาพแวดล้อม IT, Log และภัยคุกคามอย่างต่อเนื่อง</p>
+        </li>
+        <li class="loop-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="loop-step">
+          <span class="loop-num">2</span>
+          <h4 data-i18n="ov.l2t">Understand Context</h4>
+          <p data-i18n="ov.l2d">เข้าใจบริบทจาก Log, การมอนิเตอร์, Threat Intelligence และทรัพย์สิน IT</p>
+        </li>
+        <li class="loop-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="loop-step">
+          <span class="loop-num">3</span>
+          <h4 data-i18n="ov.l3t">Plan &amp; Reason</h4>
+          <p data-i18n="ov.l3d">วิเคราะห์ วางแผนขั้นตอน และให้เหตุผลประกอบการตัดสินใจ</p>
+        </li>
+        <li class="loop-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="loop-step">
+          <span class="loop-num">4</span>
+          <h4 data-i18n="ov.l4t">Take Action</h4>
+          <p data-i18n="ov.l4d">ลงมือดำเนินการตามแผน โดยขออนุมัติจากผู้ดูแลเมื่อจำเป็น</p>
+        </li>
+      </ol>
+      <p class="loop-note" data-i18n="ov.loopnote">One Appliance, One Trademark, Zero Integration Overhead — รวม Log Management และ Agentic AI ในอุปกรณ์เดียวภายใต้เครื่องหมายการค้าเดียวกัน ลดความซับซ้อน เข้ากันได้ดีที่สุด</p>
+    </div>
+
+    <!-- Audiences -->
+    <div class="grid grid-4 audience">
+      <article class="card audience-card reveal">
+        <h4 data-i18n="ov.a1t">ผู้บริหาร IT / CIO / CTO</h4>
+        <p data-i18n="ov.a1d">เห็นภาพรวมสุขภาพระบบและความเสี่ยงในหน้าเดียว ลดภาระทีม ควบคุมต้นทุนได้</p>
+      </article>
+      <article class="card audience-card reveal">
+        <h4 data-i18n="ov.a2t">ผู้ดูแลระบบ / SysAdmin</h4>
+        <p data-i18n="ov.a2d">สอบถาม Log และสั่งงานด้วยภาษาไทย ไม่ต้องเขียนคำสั่งซับซ้อน</p>
+      </article>
+      <article class="card audience-card reveal">
+        <h4 data-i18n="ov.a3t">ทีมความมั่นคงปลอดภัย</h4>
+        <p data-i18n="ov.a3d">ที่ปรึกษาด้านความปลอดภัยในตัว พร้อมรายงาน Compliance ใช้ได้ทันที</p>
+      </article>
+      <article class="card audience-card reveal">
+        <h4 data-i18n="ov.a4t">IT System Integrator</h4>
+        <p data-i18n="ov.a4d">โซลูชัน All-in-One พร้อมนำเสนอลูกค้า ติดตั้งง่าย ครบมาตรฐานราชการไทย</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ AGENTIC AI ══════════════ -->
+<section class="section section-alt" id="ai">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="ai.label">Agentic AI Assistant</span>
+      <h2 class="section-title" data-i18n="ai.title">สนทนา สั่งงาน และให้เหตุผล ด้วยภาษาธรรมชาติ</h2>
+      <p class="section-lead" data-i18n="ai.lead">ผู้ใช้เพียง “ถาม” เป็นภาษาคน CYBOT จะแปลงเป็นการค้นหา วิเคราะห์ วางแผน และดำเนินการให้อัตโนมัติ — ประมวลผลภายในองค์กรทั้งหมด ไม่ส่งข้อมูลออกสู่ Cloud</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H5l-2 2V12a8 8 0 018-8h2a8 8 0 018 8z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg>
+        </div>
+        <h3 data-i18n="ai.f1t">NL Understanding</h3>
+        <p data-i18n="ai.f1d">เข้าใจคำถามภาษาไทย/อังกฤษ ไม่ต้องใช้คำสั่งเทคนิค</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a5 5 0 00-5 5c0 1.5.7 2.6 1.4 3.6.8 1.1 1.6 2.2 1.6 3.4h4c0-1.2.8-2.3 1.6-3.4C16.3 10.6 17 9.5 17 8a5 5 0 00-5-5z"/><path d="M10 19h4M10.8 22h2.4"/></svg>
+        </div>
+        <h3 data-i18n="ai.f2t">Thinking &amp; Reasoning</h3>
+        <p data-i18n="ai.f2d">วิเคราะห์บริบท วางแผน และให้เหตุผลก่อนตัดสินใจ</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </div>
+        <h3 data-i18n="ai.f3t">NL Log Query</h3>
+        <p data-i18n="ai.f3d">สอบถาม Log ด้วยภาษาคน แสดงผลทันที</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 01-.4 2.4l2 1.6-2 3.4-2.4-1a7 7 0 01-2.1 1.2L13.7 22h-3.4l-.4-2.4a7 7 0 01-2.1-1.2l-2.4 1-2-3.4 2-1.6A7 7 0 015 12a7 7 0 01.4-2.4l-2-1.6 2-3.4 2.4 1a7 7 0 012.1-1.2L10.3 2h3.4l.4 2.4a7 7 0 012.1 1.2l2.4-1 2 3.4-2 1.6A7 7 0 0119 12z"/></svg>
+        </div>
+        <h3 data-i18n="ai.f4t">Autonomous Task</h3>
+        <p data-i18n="ai.f4d">ทำงานตามแผนอัตโนมัติ ไม่ต้องรอคำสั่งเพิ่ม</p>
+      </article>
+    </div>
+    <div class="shot-grid shot-grid-2">
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Traffic Anomalies</em></span>
+          <img src="assets/img/shot-ai-traffic-anomaly.jpg" alt="CYBOT detects traffic anomaly with real-time chart and Z-Score" loading="lazy">
+        </button>
+        <figcaption data-i18n="ai.cap1">ถามว่า “วันนี้มีเหตุการณ์อะไรผิดปกติบ้าง” — CYBOT ตรวจจับ Traffic Anomaly พร้อมกราฟและค่า Z-Score แบบเรียลไทม์</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Analysis Summary</em></span>
+          <img src="assets/img/shot-ai-summary-th.jpg" alt="CYBOT in-depth analysis summary in Thai with risk level and root cause" loading="lazy">
+        </button>
+        <figcaption data-i18n="ai.cap2">สรุปผลการวิเคราะห์เชิงลึกเป็นภาษาไทย ระบุระดับความเสี่ยง (High Risk) ต้นเหตุ และพฤติกรรมที่ตรวจพบ</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SECURITY ══════════════ -->
+<section class="section" id="security">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="sec.label">Security Assessment &amp; Threat Detection</span>
+      <h2 class="section-title" data-i18n="sec.title">ตรวจช่องโหว่ จับภัยคุกคาม พร้อมที่ปรึกษาในตัว</h2>
+      <p class="section-lead" data-i18n="sec.lead">CYBOT ทำงานเสมือนที่ปรึกษาด้านความปลอดภัยไซเบอร์ตลอด 24 ชั่วโมง ตรวจช่องโหว่ต่อเนื่อง จัดลำดับความเสี่ยง และเสนอแนวทางแก้ไขที่นำไปปฏิบัติได้จริง</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        </div>
+        <h3 data-i18n="sec.f1t">Vulnerability Scan</h3>
+        <p data-i18n="sec.f1d">ตรวจช่องโหว่อัตโนมัติ ครอบคลุมอุปกรณ์ เซิร์ฟเวอร์ และซอฟต์แวร์</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 data-i18n="sec.f2t">Remediation Guidance</h3>
+        <p data-i18n="sec.f2d">คำแนะนำแก้ไขที่ชัดเจน พร้อมลำดับความสำคัญ</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M12 8v4M12 15.5h.01"/></svg>
+        </div>
+        <h3 data-i18n="sec.f3t">Security Advisory</h3>
+        <p data-i18n="sec.f3d">ที่ปรึกษาความปลอดภัยตามมาตรฐานสากลในตัว</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3l9-16z"/><path d="M12 10v4M12 17h.01"/></svg>
+        </div>
+        <h3 data-i18n="sec.f4t">Risk Prioritization</h3>
+        <p data-i18n="sec.f4d">ประเมินและจัดลำดับความเสี่ยงตามผลกระทบ</p>
+      </article>
+    </div>
+    <div class="shot-grid shot-grid-3">
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Threat Detection</em></span>
+          <img src="assets/img/shot-threat-ids-ips.jpg" alt="Threat Detection — IDS/IPS detections with CRITICAL severity and blocked status" loading="lazy">
+        </button>
+        <figcaption data-i18n="sec.cap1">Threat Detection — จำแนก IDS/IPS, Vertical/Horizontal Scan และ Brute Force พร้อมสถานะ “blocked”</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Source Attribution</em></span>
+          <img src="assets/img/shot-threat-vertical-scan.jpg" alt="Vertical port scan detection with source attribution by country and ISP" loading="lazy">
+        </button>
+        <figcaption data-i18n="sec.cap2">ระบุแหล่งที่มาของภัยคุกคาม (Source Attribution) แยกภายใน/ภายนอกองค์กร พร้อมประเทศและผู้ให้บริการ</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Scan Workflow</em></span>
+          <img src="assets/img/shot-scan-workflow-consent.jpg" alt="Automated security scan workflow steps including consent request" loading="lazy">
+        </button>
+        <figcaption data-i18n="sec.cap3">Security Scan Workflow อัตโนมัติ — ทำงานเป็นขั้นตอน พร้อมขออนุมัติ (Consent) ก่อนดำเนินการจริง</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INVENTORY & MONITORING ══════════════ -->
+<section class="section section-alt" id="monitoring">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="mon.label">IT Inventory &amp; Proactive Monitoring</span>
+      <h2 class="section-title" data-i18n="mon.title">บริหารทรัพย์สิน IT และเฝ้าระวังเชิงรุก</h2>
+    </div>
+    <div class="grid grid-2 feature-split">
+      <article class="card list-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19.5" cy="18" r="2.2"/><path d="M21 19.6L23 21.5"/></svg>
+        </div>
+        <h3 data-i18n="mon.invT">IT Inventory &amp; Asset</h3>
+        <ul class="check-list">
+          <li data-i18n="mon.inv1">ทะเบียนฮาร์ดแวร์ ซอฟต์แวร์ License และ MA</li>
+          <li data-i18n="mon.inv2">เพิ่ม/แก้ไข/สอบถามผ่านการคุยกับ AI</li>
+          <li data-i18n="mon.inv3">นำเข้าข้อมูลจำนวนมากผ่าน CSV / Excel</li>
+          <li data-i18n="mon.inv4">แจ้งเตือน License &amp; MA ใกล้หมดอายุผ่าน Email / Line</li>
+        </ul>
+      </article>
+      <article class="card list-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>
+        </div>
+        <h3 data-i18n="mon.monT">Proactive Monitoring &amp; Alert</h3>
+        <ul class="check-list">
+          <li data-i18n="mon.mon1">ติดตาม CPU, RAM, Storage, Services แบบเรียลไทม์</li>
+          <li data-i18n="mon.mon2">SNMP / ICMP รองรับโปรไฟล์ FortiGate รายอินเทอร์เฟซ</li>
+          <li data-i18n="mon.mon3">สร้างเงื่อนไขติดตามได้ไม่จำกัด (Tracking Rules)</li>
+          <li data-i18n="mon.mon4">แจ้งเตือนทันทีผ่าน Email และ Line Application</li>
+        </ul>
+      </article>
+    </div>
+    <div class="shot-grid shot-grid-3">
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Monitor Command Surface</em></span>
+          <img src="assets/img/shot-monitor-fortigate.jpg" alt="Per-interface bandwidth graphs with FortiGate profile" loading="lazy">
+        </button>
+        <figcaption data-i18n="mon.cap1">Monitor Command Surface — กราฟ Bandwidth รายอินเทอร์เฟซ (โปรไฟล์ FortiGate) พร้อมสถานะและ Uptime</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Inventory Workspace</em></span>
+          <img src="assets/img/shot-inventory-workspace.jpg" alt="Inventory Workspace — CI registry with status, tags and filters" loading="lazy">
+        </button>
+        <figcaption data-i18n="mon.cap2">Inventory Workspace — ทะเบียน CI พร้อมสถานะ Active / Maintenance / Critical, แท็ก และความสัมพันธ์ของอุปกรณ์</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Monitor + AI Analysis</em></span>
+          <img src="assets/img/shot-monitor-ai-analysis.jpg" alt="Monitor dashboard with AI analysis panel" loading="lazy">
+        </button>
+        <figcaption data-i18n="mon.cap3">วิเคราะห์สาเหตุปัญหาระบบด้วย AI ควบคู่กับกราฟมอนิเตอร์แบบเรียลไทม์</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LOG MANAGEMENT ══════════════ -->
+<section class="section" id="logs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="log.label">Log Management &amp; Analytics</span>
+      <h2 class="section-title" data-i18n="log.title">จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560</h2>
+      <p class="section-lead" data-i18n="log.lead">แกนหลักด้านการจัดเก็บ Log ที่ผ่านการรับรองคุณสมบัติตามมาตรฐาน “ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์” NTS 4003.1-2560 รองรับปริมาณสูงพร้อมรักษาความถูกต้องของข้อมูลอย่างครบถ้วน</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M13 5l-2 14"/></svg>
+        </div>
+        <h3 data-i18n="log.f1t">Syslog Protocol</h3>
+        <p data-i18n="log.f1d">รับ–ส่ง Log ผ่าน UDP, TCP และเข้ารหัสด้วย TLS เพื่อความปลอดภัย</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.1 0l2-2a5 5 0 00-7.1-7.1l-1 1M14 11a5 5 0 00-7.1 0l-2 2a5 5 0 007.1 7.1l1-1"/></svg>
+        </div>
+        <h3 data-i18n="log.f2t">Log Integrity</h3>
+        <p data-i18n="log.f2d">ทำ Hashing ด้วย MD5 และ SHA-256 ตรวจสอบความถูกต้องของ Raw Log</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3 data-i18n="log.f3t">Retention Policy</h3>
+        <p data-i18n="log.f3d">กำหนดระยะเวลาจัดเก็บตามกฎหมาย แยกตามประเภท Log และ Channel ได้</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M8 21H5a2 2 0 01-2-2v-3M16 21h3a2 2 0 002-2v-3"/><path d="M9 12h6"/></svg>
+        </div>
+        <h3 data-i18n="log.f4t">Built-in Log Parser</h3>
+        <p data-i18n="log.f4d">วิเคราะห์รูปแบบอัตโนมัติ KV, CSV, GROK, JSON ผ่าน Web UI โดยไม่ต้องติดตั้งโปรแกรมเพิ่ม</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </div>
+        <h3 data-i18n="log.f5t">Log Forwarding &amp; SIEM</h3>
+        <p data-i18n="log.f5d">สร้าง Filter ส่งต่อ Log ตามเงื่อนไข ไปยัง Syslog Server หรือ SIEM ผ่าน TCP/UDP</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+        </div>
+        <h3 data-i18n="log.f6t">Secure Export</h3>
+        <p data-i18n="log.f6d">เข้ารหัสข้อมูล Raw Log ก่อนส่งออก พร้อม Hashing รับรองความถูกต้อง</p>
+      </article>
+    </div>
+    <div class="grid grid-2 feature-split">
+      <article class="card list-card reveal">
+        <h3 data-i18n="log.perfT">ประสิทธิภาพและลิขสิทธิ์</h3>
+        <ul class="check-list">
+          <li data-i18n="log.perf1">ประมวลผลไม่น้อยกว่า 7,000 EPS โดยไม่สูญหายของข้อมูล</li>
+          <li data-i18n="log.perf2">ลิขสิทธิ์ไม่จำกัดจำนวนอุปกรณ์ (Unlimited Devices)</li>
+          <li data-i18n="log.perf3">ลิขสิทธิ์ไม่จำกัดปริมาณข้อมูลต่อวัน (Unlimited Volume)</li>
+          <li data-i18n="log.perf4">รองรับ Archive Log เพื่อจัดเก็บและเรียกดูย้อนหลัง</li>
+        </ul>
+      </article>
+      <article class="card list-card reveal">
+        <h3 data-i18n="log.queryT">Query &amp; Analytics</h3>
+        <ul class="check-list">
+          <li data-i18n="log.query1">เงื่อนไขค้นหายืดหยุ่น — ช่วงเวลา, Channel, Host, Keyword, ระบุ Field</li>
+          <li data-i18n="log.query2">ตัวดำเนินการขั้นสูง =, !=, AND, OR · Wildcard (*, ?) · Regular Expression</li>
+          <li data-i18n="log.query3">บันทึกและเรียกใช้ Query ซ้ำ พร้อมประวัติการค้นหา</li>
+          <li data-i18n="log.query4">Dashboard เรียลไทม์ แจ้งเตือนเมื่อไม่มี Log เข้า ส่งออก PDF, CSV, Excel</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COMPLIANCE ══════════════ -->
+<section class="section section-alt" id="compliance">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="comp.label">Compliance &amp; Governance</span>
+      <h2 class="section-title" data-i18n="comp.title">ตรวจสอบเหตุการณ์ให้สอดคล้องตามมาตรฐาน</h2>
+      <p class="section-lead" data-i18n="comp.lead">CYBOT ทำ Mapping ข้อมูล Log เข้ากับข้อกำหนดของกฎหมายและมาตรฐานสำคัญ พร้อมเหตุผลความสอดคล้อง (Compliance Rationale) และข้อเสนอแนะในการปรับปรุง</p>
+    </div>
+    <div class="badge-wall reveal">
+      <span class="std-badge">PDPA</span>
+      <span class="std-badge" data-i18n="comp.b1">พ.ร.บ.ความมั่นคงปลอดภัยไซเบอร์</span>
+      <span class="std-badge">ISO 27001</span>
+      <span class="std-badge">NTS 4003.1-2560</span>
+      <span class="std-badge">NIST CSF</span>
+      <span class="std-badge">PCI-DSS</span>
+      <span class="std-badge">GDPR</span>
+      <span class="std-badge" data-i18n="comp.b2">พ.ร.บ.คอมพิวเตอร์</span>
+    </div>
+    <div class="shot-grid shot-grid-1">
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>PDPA Mapping</em></span>
+          <img src="assets/img/shot-pdpa-mapping.jpg" alt="CYBOT maps log data to PDPA articles with compliance rationale" loading="lazy">
+        </button>
+        <figcaption data-i18n="comp.cap1">ตัวอย่าง: CYBOT ทำ Mapping ข้อมูล Log เข้ากับมาตราของ PDPA — ระบุหัวข้อการควบคุม แหล่งข้อมูล Log มาตราที่เกี่ยวข้อง และเหตุผลความสอดคล้อง</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEPLOYMENT ══════════════ -->
+<section class="section" id="deployment">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="dep.label">Deployment &amp; Appliance</span>
+      <h2 class="section-title" data-i18n="dep.title">สถาปัตยกรรม Hardware Appliance · On-Premise 100%</h2>
+      <p class="section-lead" data-i18n="dep.lead">ติดตั้งและประมวลผลภายในองค์กรทั้งหมด รวมส่วนบริหารจัดการ Log และส่วนประมวลผล AI ไว้ในอุปกรณ์เดียวภายใต้เครื่องหมายการค้าเดียวกัน</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        </div>
+        <h3 data-i18n="dep.f1t">100% On-Premise</h3>
+        <p data-i18n="dep.f1d">ติดตั้งและประมวลผลในศูนย์ข้อมูลองค์กรทั้งหมด ไม่พึ่งพา Cloud หรือบริการภายนอก</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h2M11 16.5h2"/></svg>
+        </div>
+        <h3 data-i18n="dep.f2t">Local Processing &amp; Storage</h3>
+        <p data-i18n="dep.f2d">Log และข้อมูลทั้งหมดประมวลผลและจัดเก็บภายในเครื่อง ไม่ส่งออกนอกเครือข่ายโดยเด็ดขาด</p>
+      </article>
+      <article class="card feature-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M9.5 12l1.8 1.8 3.4-3.6"/></svg>
+        </div>
+        <h3 data-i18n="dep.f3t">Data Sovereignty</h3>
+        <p data-i18n="dep.f3d">องค์กรควบคุมข้อมูลของตนได้อย่างสมบูรณ์ ไม่มีความเสี่ยงจากการรั่วไหลผ่าน Cloud</p>
+      </article>
+    </div>
+    <div class="grid grid-2 feature-split">
+      <article class="card appliance-card reveal">
+        <div class="appliance-head">
+          <img src="assets/img/mascot-dark.png" alt="CYBOT mascot" class="appliance-mascot">
+          <div>
+            <h3 data-i18n="dep.appT">Softnix Logger CYBOT Appliance</h3>
+            <p class="appliance-sub">Deployment: Softnix LLM · Softnix Private Cloud</p>
+          </div>
+        </div>
+        <ul class="check-list">
+          <li data-i18n="dep.app1">พร้อมใช้งานทันที (Ready On-Premise) · Privacy by Design</li>
+          <li data-i18n="dep.app2">ฟังก์ชันครบ — Log Monitor, Monitor, Security Monitor, IT Inventory</li>
+          <li data-i18n="dep.app3">พื้นที่จัดเก็บ Log 1TB – 2TB · Archive 90 วัน</li>
+          <li data-i18n="dep.app4">ประมวลผล 7,000 Events/วินาที · CYBOT AI Chatbot — AI Buddy สำหรับงาน IT Security</li>
+        </ul>
+      </article>
+      <figure class="shot reveal">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>Task Control Room</em></span>
+          <img src="assets/img/shot-task-control-room.jpg" alt="Task Control Room — automated security scan workflows and schedulers" loading="lazy">
+        </button>
+        <figcaption data-i18n="dep.cap1">Task Control Room — ตั้งเวลา Scan อัตโนมัติ (Scheduler) ติดตามผลทุก Workflow ครบทุกขั้นตอน</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SPECS ══════════════ -->
+<section class="section section-alt" id="specs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="spec.label">Specifications</span>
+      <h2 class="section-title" data-i18n="spec.title">สรุปคุณสมบัติทางเทคนิค</h2>
+    </div>
+    <div class="spec-table-wrap card reveal">
+      <table class="spec-table">
+        <thead>
+          <tr><th data-i18n="spec.hItem">รายการ</th><th data-i18n="spec.hDetail">รายละเอียด</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="spec.r1k">ประเภทผลิตภัณฑ์</td><td data-i18n="spec.r1v">Hardware Appliance — On-Premise AI &amp; Log Management (All-in-One)</td></tr>
+          <tr><td data-i18n="spec.r2k">AI Engine</td><td data-i18n="spec.r2v">Agentic AI — Softnix LLM (ประมวลผลภายในองค์กร) รองรับภาษาไทย &amp; อังกฤษ</td></tr>
+          <tr><td data-i18n="spec.r3k">Log Performance</td><td data-i18n="spec.r3v">ไม่น้อยกว่า 7,000 EPS · ไม่จำกัดจำนวน Device · ไม่จำกัดปริมาณข้อมูลต่อวัน</td></tr>
+          <tr><td data-i18n="spec.r4k">Log Storage / Archive</td><td data-i18n="spec.r4v">1TB – 2TB · Archive Log 90 วัน (เรียกดูย้อนหลังได้)</td></tr>
+          <tr><td data-i18n="spec.r5k">มาตรฐานจัดเก็บ Log</td><td data-i18n="spec.r5v">NTS 4003.1-2560 (ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์)</td></tr>
+          <tr><td data-i18n="spec.r6k">Log Ingestion</td><td data-i18n="spec.r6v">Syslog ผ่าน UDP / TCP / TLS</td></tr>
+          <tr><td data-i18n="spec.r7k">Log Integrity</td><td data-i18n="spec.r7v">Hashing — MD5, SHA-256</td></tr>
+          <tr><td data-i18n="spec.r8k">Log Parser</td><td data-i18n="spec.r8v">Built-in — KV, CSV, GROK, JSON (ตั้งค่าผ่าน Web UI)</td></tr>
+          <tr><td data-i18n="spec.r9k">Search &amp; Query</td><td data-i18n="spec.r9v">=, !=, AND, OR · Wildcard (*, ?) · Regular Expression · Saved Query</td></tr>
+          <tr><td data-i18n="spec.r10k">Security</td><td data-i18n="spec.r10v">Vulnerability Scanning · IDS/IPS · Threat Detection · Risk Prioritization</td></tr>
+          <tr><td data-i18n="spec.r11k">IT Inventory</td><td data-i18n="spec.r11v">Device/Software Registry · CSV/Excel Import · License &amp; MA Expiry Alert</td></tr>
+          <tr><td data-i18n="spec.r12k">Monitoring</td><td data-i18n="spec.r12v">Real-time Health · SNMP / ICMP · Unlimited Tracking Rules</td></tr>
+          <tr><td data-i18n="spec.r13k">Alerting</td><td data-i18n="spec.r13v">Email · Line Application</td></tr>
+          <tr><td data-i18n="spec.r14k">Forwarding / Integration</td><td data-i18n="spec.r14v">Syslog Forwarding (TCP/UDP) · SIEM Integration</td></tr>
+          <tr><td data-i18n="spec.r15k">Report Export</td><td data-i18n="spec.r15v">PDF · CSV · Excel</td></tr>
+          <tr><td data-i18n="spec.r16k">Compliance</td><td data-i18n="spec.r16v">PDPA · พ.ร.บ.ไซเบอร์ · ISO 27001 · NTS 4003.1-2560 · NIST · PCI-DSS · GDPR</td></tr>
+          <tr><td data-i18n="spec.r17k">Deployment</td><td data-i18n="spec.r17v">100% On-Premise · Softnix LLM · Softnix Private Cloud</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA / CONTACT ══════════════ -->
+<section class="section cta-section" id="contact">
+  <div class="cta-bg" aria-hidden="true"><div class="hero-glow glow-c"></div></div>
+  <div class="container">
+    <div class="cta-card reveal">
+      <img src="assets/img/mascot-white.png" alt="CYBOT mascot" class="cta-mascot">
+      <div class="cta-copy">
+        <h2 class="cta-title" data-i18n="cta.title">พร้อมให้ CYBOT เป็นผู้ช่วยทีม IT ของคุณแล้วหรือยัง</h2>
+        <p class="cta-lead" data-i18n="cta.lead">สนใจทดสอบระบบหรือขอใบเสนอราคา ติดต่อ Softnix Technology หรือตัวแทนจำหน่ายที่ได้รับการแต่งตั้ง</p>
+        <div class="cta-actions">
+          <a href="mailto:sales@softnix.co.th?subject=CYBOT%20Demo%20Request" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span data-i18n="cta.btn1">ขอ Demo — sales@softnix.co.th</span>
+          </a>
+          <div class="cta-docs">
+            <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost btn-sm" data-i18n="cta.docTH">Datasheet (TH)</a>
+            <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_EN.pdf" target="_blank" class="btn btn-ghost btn-sm" data-i18n="cta.docEN">Datasheet (EN)</a>
+          </div>
+        </div>
+        <p class="cta-site">www.softnix.co.th</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/logo-horizontal.png" alt="Softnix CYBOT logo" class="footer-logo">
+      <p class="footer-slogan">CYBOT — Secure. Compliant. Intelligent. Automated.</p>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-company">Softnix Technology Co., Ltd.</p>
+      <p><a href="https://www.softnix.co.th" target="_blank" rel="noopener">www.softnix.co.th</a> · <a href="mailto:sales@softnix.co.th">sales@softnix.co.th</a></p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 Softnix Technology Co., Ltd. สงวนลิขสิทธิ์</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img src="" alt="" id="lightboxImg">
+    <figcaption id="lightboxCap"></figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
