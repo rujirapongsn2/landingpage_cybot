@@ -25,7 +25,7 @@ const I18N = {
     'hero.badge': 'On-Premise AI Appliance',
     'hero.tagline': 'ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์ขององค์กรคุณ',
     'hero.lead': 'ผู้ช่วยอัจฉริยะแบบ Agentic AI ที่ทำงานภายในองค์กร 100% (On-Premise) รวมระบบจัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560, การตรวจสอบช่องโหว่, การเฝ้าระวังเชิงรุก และการบริหารทรัพย์สิน IT ไว้ในอุปกรณ์เดียว — สนทนาและสั่งงานด้วยภาษาไทย-อังกฤษได้ทันที',
-    'hero.cta1': 'ขอ Demo / ใบเสนอราคา',
+    'hero.cta1': 'ชม Demo',
     'hero.cta2': 'ดาวน์โหลด Datasheet',
     'hero.stat1': 'Events/วินาที (EPS)',
     'hero.stat2num': 'ไม่จำกัด',
@@ -224,7 +224,7 @@ const I18N = {
     'hero.badge': 'On-Premise AI Appliance',
     'hero.tagline': 'Your Intelligent IT & Cyber Assistant',
     'hero.lead': 'An Agentic-AI assistant that runs entirely inside your organization (100% On-Premise) — unifying standards-certified log management (NTS 4003.1-2560), vulnerability assessment, proactive monitoring and IT asset management in a single appliance. Simply ask in Thai or English to get answers and actions instantly.',
-    'hero.cta1': 'Request Demo / Quote',
+    'hero.cta1': 'Watch Demo',
     'hero.cta2': 'Download Datasheet',
     'hero.stat1': 'Events / sec (EPS)',
     'hero.stat2num': 'Unlimited',
@@ -548,7 +548,40 @@ const countObserver = new IntersectionObserver(
 document.querySelectorAll('.count').forEach((el) => countObserver.observe(el));
 
 /* ─────────────────────────────────────────────
-   6. LIGHTBOX
+   6. VIDEO MODAL (YouTube embed, in-page feel)
+   ───────────────────────────────────────────── */
+const VIDEO_EMBED =
+  'https://www.youtube-nocookie.com/embed/hKXHfKJQCn0?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+
+const videoModal = document.getElementById('videoModal');
+const videoIframe = document.getElementById('videoIframe');
+const demoBtn = document.getElementById('demoBtn');
+
+function openVideoModal() {
+  videoIframe.src = VIDEO_EMBED;
+  videoModal.classList.add('open');
+  videoModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('videoClose').focus();
+}
+
+function closeVideoModal() {
+  videoModal.classList.remove('open');
+  videoModal.setAttribute('aria-hidden', 'true');
+  videoIframe.src = ''; // stop playback
+  document.body.style.overflow = '';
+  demoBtn.focus();
+}
+
+demoBtn.addEventListener('click', openVideoModal);
+document.getElementById('videoClose').addEventListener('click', closeVideoModal);
+document.getElementById('videoBackdrop').addEventListener('click', closeVideoModal);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && videoModal.classList.contains('open')) closeVideoModal();
+});
+
+/* ─────────────────────────────────────────────
+   7. LIGHTBOX
    ───────────────────────────────────────────── */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
@@ -592,7 +625,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ─────────────────────────────────────────────
-   7. BACK TO TOP
+   8. BACK TO TOP
    ───────────────────────────────────────────── */
 const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => {

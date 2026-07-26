@@ -78,10 +78,10 @@
       <p class="hero-slogan reveal">Secure. Compliant. Intelligent. Automated.</p>
       <p class="hero-lead reveal" data-i18n="hero.lead">ผู้ช่วยอัจฉริยะแบบ Agentic AI ที่ทำงานภายในองค์กร 100% (On-Premise) รวมระบบจัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560, การตรวจสอบช่องโหว่, การเฝ้าระวังเชิงรุก และการบริหารทรัพย์สิน IT ไว้ในอุปกรณ์เดียว — สนทนาและสั่งงานด้วยภาษาไทย-อังกฤษได้ทันที</p>
       <div class="hero-cta reveal">
-        <a href="#contact" class="btn btn-primary">
-          <span data-i18n="hero.cta1">ขอ Demo / ใบเสนอราคา</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+        <button type="button" class="btn btn-primary" id="demoBtn" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13a1 1 0 001.54.84l11-6.5a1 1 0 000-1.68l-11-6.5A1 1 0 008 5.5z"/></svg>
+          <span data-i18n="hero.cta1">ชม Demo</span>
+        </button>
         <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost" id="datasheetBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
           <span data-i18n="hero.cta2">ดาวน์โหลด Datasheet</span>
@@ -651,6 +651,21 @@
     </div>
   </div>
 </footer>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="CYBOT Demo Video">
+  <div class="video-backdrop" id="videoBackdrop"></div>
+  <div class="video-frame">
+    <button class="video-close" id="videoClose" aria-label="Close video">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="video-aspect">
+      <iframe id="videoIframe" src="" title="Softnix Logger CYBOT — Demo Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</div>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot viewer">

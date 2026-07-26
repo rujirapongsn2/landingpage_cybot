@@ -426,6 +426,55 @@ button { font-family: inherit; cursor: pointer; }
 .footer-company { font-weight: 600; color: var(--text); }
 .footer-copy { font-size: 12.5px; color: var(--text-dim); margin-top: 6px; }
 
+/* ═══════════ VIDEO MODAL ═══════════ */
+.video-modal {
+  position: fixed; inset: 0; z-index: 210;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  visibility: hidden; pointer-events: none;
+}
+.video-modal.open { visibility: visible; pointer-events: auto; }
+
+.video-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(2, 4, 9, 0.78);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: 0; transition: opacity .25s ease;
+}
+.video-modal.open .video-backdrop { opacity: 1; }
+
+.video-frame {
+  position: relative; width: min(960px, 94vw);
+  border-radius: 14px; overflow: visible;
+  opacity: 0; transform: scale(.92) translateY(10px);
+  transition: opacity .25s ease, transform .25s cubic-bezier(.2,.7,.3,1.1);
+}
+.video-modal.open .video-frame { opacity: 1; transform: scale(1) translateY(0); }
+
+.video-aspect {
+  position: relative; aspect-ratio: 16 / 9; width: 100%;
+  border-radius: 14px; overflow: hidden; background: #000;
+  border: 1px solid rgba(148, 184, 255, 0.18);
+  box-shadow: 0 30px 90px -18px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(63, 214, 239, 0.08), 0 12px 44px -12px rgba(63, 214, 239, 0.18);
+}
+.video-aspect iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+
+.video-close {
+  position: absolute; top: -14px; right: -14px; z-index: 2;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #101a2e; border: 1px solid var(--border-strong); color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5); transition: background .2s, transform .2s;
+}
+.video-close:hover { background: #1a2742; transform: scale(1.06); }
+.video-close svg { width: 18px; height: 18px; }
+
+@media (max-width: 680px) {
+  .video-modal { padding: 14px; }
+  .video-frame { width: 100%; }
+  .video-close { top: -12px; right: -4px; width: 36px; height: 36px; }
+}
+
 /* ═══════════ LIGHTBOX ═══════════ */
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
