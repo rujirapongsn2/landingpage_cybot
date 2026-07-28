@@ -198,16 +198,31 @@ button { font-family: inherit; cursor: pointer; }
 .stat-label { font-size: 12.5px; color: var(--text-dim); margin-top: 2px; line-height: 1.5; }
 
 .hero-visual { position: relative; display: flex; justify-content: center; }
-.hero-mascot-wrap { position: relative; width: min(420px, 90%); }
-.hero-mascot { position: relative; z-index: 2; animation: float 6s ease-in-out infinite; filter: drop-shadow(0 30px 60px rgba(63, 214, 239, .28)); }
+.hero-scene { position: relative; width: min(500px, 100%); }
+.hero-mascot {
+  position: relative; z-index: 2; width: 74%;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 30px 60px rgba(63, 214, 239, .28));
+}
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
 .hero-mascot-ring {
-  position: absolute; inset: -8%; border-radius: 50%;
+  position: absolute; width: 72%; aspect-ratio: 1; left: -6%; top: -4%;
+  border-radius: 50%;
   background: conic-gradient(from 120deg, rgba(139,195,74,.35), rgba(77,208,225,.4), rgba(66,165,245,.35), rgba(139,195,74,.35));
   filter: blur(42px); opacity: .55; z-index: 1;
   animation: spin 14s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-server {
+  position: absolute; z-index: 3;
+  width: 66%; right: -8%; bottom: 2%;
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, .55));
+  animation: float 8s ease-in-out .9s infinite;
+}
+.srv-eye { animation: srv-blink 4.6s infinite; }
+@keyframes srv-blink { 0%, 91%, 100% { opacity: 1; } 94.5% { opacity: .12; } }
+.srv-led { animation: pulse 2.2s infinite; }
 
 .hero-chip {
   position: absolute; z-index: 3;
@@ -219,8 +234,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
 .chip-dot.ok { background: var(--accent-2); box-shadow: 0 0 10px var(--accent-2); }
-.chip-a { top: 16%; left: -4%; animation: float 7s ease-in-out infinite; }
-.chip-b { bottom: 12%; right: -3%; animation: float 8s ease-in-out 1.2s infinite; }
+.chip-dot.srv { background: #f0d18a; box-shadow: 0 0 10px #f0d18a; }
+.chip-a { top: 8%; left: -6%; animation: float 7s ease-in-out infinite; }
+.chip-b { bottom: 4%; left: -2%; animation: float 8s ease-in-out 1.2s infinite; }
+.chip-c { top: 2%; right: -5%; animation: float 7.4s ease-in-out .6s infinite; }
 
 .hero-shot { position: relative; margin-top: 72px; }
 
@@ -533,9 +550,11 @@ button { font-family: inherit; cursor: pointer; }
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 1080px) {
   .hero-inner { grid-template-columns: 1fr; gap: 44px; }
-  .hero-visual { order: -1; }
-  .hero-mascot-wrap { width: min(300px, 70%); }
-  .chip-a { left: 4%; } .chip-b { right: 4%; }
+  .hero-visual { order: -1; flex-wrap: wrap; }
+  .hero-scene { width: min(330px, 82%); }
+  .chip-a { left: 0; top: 4%; }
+  .chip-b { position: static; margin: 18px 7px 0; animation: none; }
+  .chip-c { position: static; margin: 18px 7px 0; animation: none; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .shot-grid-3 { grid-template-columns: 1fr; max-width: 760px; margin-inline: auto; }

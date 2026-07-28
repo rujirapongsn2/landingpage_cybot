@@ -35,6 +35,7 @@ const I18N = {
     'hero.stat4': 'PDPA · ISO 27001 · NIST · PCI-DSS · GDPR',
     'hero.chip1': 'Agentic AI — เข้าใจ วางแผน ลงมือทำ',
     'hero.chip2': 'Human-in-the-Loop',
+    'hero.chip3': 'Local AI Server · 100% On-Premise',
     'hero.shotcap': 'CYBOT Console — พร้อมรับคำถามและสั่งงานด้วยภาษาคน “Ask CyBot Anything…”',
 
     'ov.label': 'Product Overview',
@@ -234,6 +235,7 @@ const I18N = {
     'hero.stat4': 'PDPA · ISO 27001 · NIST · PCI-DSS · GDPR',
     'hero.chip1': 'Agentic AI — Understands, Plans, Acts',
     'hero.chip2': 'Human-in-the-Loop',
+    'hero.chip3': 'Local AI Server · 100% On-Premise',
     'hero.shotcap': 'CYBOT Console — ask questions and issue commands in plain language: “Ask CyBot Anything…”',
 
     'ov.label': 'Product Overview',

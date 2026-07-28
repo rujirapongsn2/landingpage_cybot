@@ -107,12 +107,71 @@
       </dl>
     </div>
     <div class="hero-visual reveal">
-      <div class="hero-mascot-wrap">
+      <div class="hero-scene">
         <div class="hero-mascot-ring" aria-hidden="true"></div>
-        <img src="assets/img/mascot-circle.png" alt="CYBOT — AI Robot Cyber Security Mascot" class="hero-mascot">
+        <img src="assets/img/mascot-dark.png" alt="CYBOT — AI Robot Cyber Security Mascot" class="hero-mascot">
+        <svg class="hero-server" viewBox="0 0 360 240" role="img" aria-label="CYBOT appliance — a local on-premise AI server">
+          <defs>
+            <linearGradient id="srvBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#27324a"/>
+              <stop offset="1" stop-color="#131a2b"/>
+            </linearGradient>
+            <linearGradient id="srvTop" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0d18a"/>
+              <stop offset=".55" stop-color="#cfa558"/>
+              <stop offset="1" stop-color="#a87c3c"/>
+            </linearGradient>
+            <linearGradient id="srvSide" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1a2336"/>
+              <stop offset="1" stop-color="#0b111f"/>
+            </linearGradient>
+            <radialGradient id="srvGlow" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#3fd6ef" stop-opacity=".5"/>
+              <stop offset="1" stop-color="#3fd6ef" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="srvSoft" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="2.6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- floor glow -->
+          <ellipse cx="185" cy="214" rx="150" ry="17" fill="url(#srvGlow)"/>
+
+          <!-- right side face -->
+          <polygon points="300,60 330,36 330,146 300,170" fill="url(#srvSide)"/>
+          <!-- top face (gold cover) -->
+          <polygon points="70,60 100,36 330,36 300,60" fill="url(#srvTop)"/>
+          <line x1="70" y1="60" x2="300" y2="60" stroke="#f5dfa8" stroke-width="2" opacity=".85"/>
+          <!-- front face -->
+          <rect x="70" y="60" width="230" height="110" rx="12" fill="url(#srvBody)" stroke="#3a4a6b" stroke-opacity=".55"/>
+
+          <!-- ventilation slits -->
+          <g stroke="#0a101d" stroke-width="4.5" stroke-linecap="round" opacity=".9">
+            <line x1="94"  y1="82" x2="94"  y2="144"/>
+            <line x1="106" y1="82" x2="106" y2="144"/>
+            <line x1="118" y1="82" x2="118" y2="144"/>
+            <line x1="130" y1="82" x2="130" y2="144"/>
+            <line x1="142" y1="82" x2="142" y2="144"/>
+            <line x1="154" y1="82" x2="154" y2="144"/>
+            <line x1="166" y1="82" x2="166" y2="144"/>
+            <line x1="178" y1="82" x2="178" y2="144"/>
+          </g>
+
+          <!-- CYBOT face display -->
+          <rect x="202" y="84" width="80" height="52" rx="9" fill="#050a12" stroke="#3fd6ef" stroke-opacity=".35"/>
+          <rect class="srv-eye" x="218" y="99" width="11" height="15" rx="4" fill="#4dd0e1" filter="url(#srvSoft)"/>
+          <rect class="srv-eye" x="255" y="99" width="11" height="15" rx="4" fill="#4dd0e1" filter="url(#srvSoft)"/>
+          <path d="M230 122 q12 8 24 0" stroke="#4dd0e1" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
+
+          <!-- status LEDs -->
+          <circle class="srv-led" cx="284" cy="153" r="3.5" fill="#8bc34a" filter="url(#srvSoft)"/>
+          <rect x="90" y="151" width="26" height="4.5" rx="2.25" fill="#3fd6ef" opacity=".75"/>
+        </svg>
       </div>
       <div class="hero-chip chip-a"><span class="chip-dot"></span><span data-i18n="hero.chip1">Agentic AI — เข้าใจ วางแผน ลงมือทำ</span></div>
       <div class="hero-chip chip-b"><span class="chip-dot ok"></span><span data-i18n="hero.chip2">Human-in-the-Loop</span></div>
+      <div class="hero-chip chip-c"><span class="chip-dot srv"></span><span data-i18n="hero.chip3">Local AI Server · 100% On-Premise</span></div>
     </div>
   </div>
   <div class="container hero-shot reveal">
