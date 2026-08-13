@@ -74,7 +74,7 @@
         <span class="hero-title-line">Softnix Logger</span>
         <span class="hero-title-grad">CYBOT</span>
       </h1>
-      <p class="hero-tagline reveal" data-i18n="hero.tagline">ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์ขององค์กรคุณ</p>
+      <p class="hero-tagline reveal" data-i18n="hero.tagline">รวม Log Management, Security และ Monitoring ครบในอุปกรณ์เดียว — สั่งงานด้วยภาษาไทยได้ทันที</p>
       <p class="hero-slogan reveal">Secure. Compliant. Intelligent. Automated.</p>
       <p class="hero-lead reveal" data-i18n="hero.lead">ผู้ช่วยอัจฉริยะแบบ Agentic AI ที่ทำงานภายในองค์กร 100% (On-Premise) รวมระบบจัดเก็บ Log ตามมาตรฐาน พ.ร.บ. คอมพิวเตอร์ 2560 พร้อมทั้งการตรวจสอบช่องโหว่ความปลอดภัย ตรวจสอบสถานะระบบ และบริหารทรัพย์สิน IT ไว้ในอุปกรณ์เดียว — สนทนาและสั่งงานด้วยภาษาไทย-อังกฤษได้ทันที</p>
       <div class="hero-cta reveal">
@@ -82,7 +82,11 @@
           <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13a1 1 0 001.54.84l11-6.5a1 1 0 000-1.68l-11-6.5A1 1 0 008 5.5z"/></svg>
           <span data-i18n="hero.cta1">ชม Demo</span>
         </button>
-        <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost" id="datasheetBtn">
+        <a href="https://www.softnix.co.th/contact/" target="_blank" rel="noopener" class="btn btn-poc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span data-i18n="hero.ctapoc">ขอ Proof of Concept ฟรี</span>
+        </a>
+        <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost btn-sm" id="datasheetBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
           <span data-i18n="hero.cta2">ดาวน์โหลด Datasheet</span>
         </a>
@@ -106,82 +110,20 @@
         </div>
       </dl>
     </div>
-    <div class="hero-visual reveal">
-      <div class="hero-scene">
-        <div class="hero-mascot-ring" aria-hidden="true"></div>
-        <img src="assets/img/mascot-dark.png" alt="CYBOT — AI Robot Cyber Security Mascot" class="hero-mascot">
-        <svg class="hero-server" viewBox="0 0 360 240" role="img" aria-label="CYBOT appliance — a local on-premise AI server">
-          <defs>
-            <linearGradient id="srvBody" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#27324a"/>
-              <stop offset="1" stop-color="#131a2b"/>
-            </linearGradient>
-            <linearGradient id="srvTop" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#f0d18a"/>
-              <stop offset=".55" stop-color="#cfa558"/>
-              <stop offset="1" stop-color="#a87c3c"/>
-            </linearGradient>
-            <linearGradient id="srvSide" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#1a2336"/>
-              <stop offset="1" stop-color="#0b111f"/>
-            </linearGradient>
-            <radialGradient id="srvGlow" cx=".5" cy=".5" r=".5">
-              <stop offset="0" stop-color="#3fd6ef" stop-opacity=".5"/>
-              <stop offset="1" stop-color="#3fd6ef" stop-opacity="0"/>
-            </radialGradient>
-            <filter id="srvSoft" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="2.6" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-
-          <!-- floor glow -->
-          <ellipse cx="185" cy="214" rx="150" ry="17" fill="url(#srvGlow)"/>
-
-          <!-- right side face -->
-          <polygon points="300,60 330,36 330,146 300,170" fill="url(#srvSide)"/>
-          <!-- top face (gold cover) -->
-          <polygon points="70,60 100,36 330,36 300,60" fill="url(#srvTop)"/>
-          <line x1="70" y1="60" x2="300" y2="60" stroke="#f5dfa8" stroke-width="2" opacity=".85"/>
-          <!-- front face -->
-          <rect x="70" y="60" width="230" height="110" rx="12" fill="url(#srvBody)" stroke="#3a4a6b" stroke-opacity=".55"/>
-
-          <!-- ventilation slits -->
-          <g stroke="#0a101d" stroke-width="4.5" stroke-linecap="round" opacity=".9">
-            <line x1="94"  y1="82" x2="94"  y2="144"/>
-            <line x1="106" y1="82" x2="106" y2="144"/>
-            <line x1="118" y1="82" x2="118" y2="144"/>
-            <line x1="130" y1="82" x2="130" y2="144"/>
-            <line x1="142" y1="82" x2="142" y2="144"/>
-            <line x1="154" y1="82" x2="154" y2="144"/>
-            <line x1="166" y1="82" x2="166" y2="144"/>
-            <line x1="178" y1="82" x2="178" y2="144"/>
-          </g>
-
-          <!-- CYBOT face display -->
-          <rect x="202" y="84" width="80" height="52" rx="9" fill="#050a12" stroke="#3fd6ef" stroke-opacity=".35"/>
-          <rect class="srv-eye" x="218" y="99" width="11" height="15" rx="4" fill="#4dd0e1" filter="url(#srvSoft)"/>
-          <rect class="srv-eye" x="255" y="99" width="11" height="15" rx="4" fill="#4dd0e1" filter="url(#srvSoft)"/>
-          <path d="M230 122 q12 8 24 0" stroke="#4dd0e1" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
-
-          <!-- status LEDs -->
-          <circle class="srv-led" cx="284" cy="153" r="3.5" fill="#8bc34a" filter="url(#srvSoft)"/>
-          <rect x="90" y="151" width="26" height="4.5" rx="2.25" fill="#3fd6ef" opacity=".75"/>
-        </svg>
-      </div>
+    <div class="hero-ui reveal">
+      <div class="hero-ui-glow" aria-hidden="true"></div>
+      <img src="assets/img/mascot-circle.png" alt="CYBOT mascot" class="hero-ui-mascot">
+      <figure class="shot hero-ui-frame">
+        <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
+          <span class="shot-bar"><i></i><i></i><i></i><em>CYBOT Console</em></span>
+          <img src="assets/img/shot-ai-welcome.jpg" alt="CYBOT AI Assistant welcome screen — Secure, Compliant, Intelligent, Automated">
+        </button>
+      </figure>
       <div class="hero-chip chip-a"><span class="chip-dot"></span><span data-i18n="hero.chip1">Agentic AI — เข้าใจ วางแผน ลงมือทำ</span></div>
       <div class="hero-chip chip-b"><span class="chip-dot ok"></span><span data-i18n="hero.chip2">Human-in-the-Loop</span></div>
       <div class="hero-chip chip-c"><span class="chip-dot srv"></span><span data-i18n="hero.chip3">Local AI Server · 100% On-Premise</span></div>
+      <p class="hero-ui-cap" data-i18n="hero.shotcap">CYBOT Console — พร้อมรับคำถามและสั่งงานด้วยภาษาคน “Ask CyBot Anything…”</p>
     </div>
-  </div>
-  <div class="container hero-shot reveal">
-    <figure class="shot">
-      <button class="shot-btn" type="button" data-lightbox aria-label="View screenshot">
-        <span class="shot-bar"><i></i><i></i><i></i><em>CYBOT Console</em></span>
-        <img src="assets/img/shot-ai-welcome.jpg" alt="CYBOT AI Assistant welcome screen — Secure, Compliant, Intelligent, Automated" loading="lazy">
-      </button>
-      <figcaption data-i18n="hero.shotcap">CYBOT Console — พร้อมรับคำถามและสั่งงานด้วยภาษาคน “Ask CyBot Anything…”</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -286,6 +228,88 @@
         <h4 data-i18n="ov.a4t">IT System Integrator</h4>
         <p data-i18n="ov.a4d">โซลูชัน All-in-One พร้อมนำเสนอลูกค้า ติดตั้งง่าย ครบมาตรฐานราชการไทย</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COMPARISON ══════════════ -->
+<section class="section section-alt" id="compare">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="cmp.label">Why CYBOT</span>
+      <h2 class="section-title" data-i18n="cmp.title">Tool-Based IT vs AI-Assisted IT</h2>
+      <p class="section-lead" data-i18n="cmp.lead">เปรียบเทียบการทำงานแบบเดิมที่ต้องใช้เครื่องมือหลายตัว กับ CYBOT ที่รวมทุกอย่างเป็นหนึ่งเดียว</p>
+    </div>
+    <div class="compare-wrap card reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th data-i18n="cmp.h1">Tool-Based IT (แบบเดิม)</th>
+            <th class="is-cybot" data-i18n="cmp.h2">CYBOT — AI-Assisted IT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th data-i18n="cmp.r1">การติดตั้ง</th><td data-i18n="cmp.o1">หลายเครื่องมือ หลายผู้ขาย ต้องอินทิเกรตเอง</td><td class="is-cybot" data-i18n="cmp.n1">Appliance เดียว ครบทุกฟังก์ชัน ติดตั้งง่าย</td></tr>
+          <tr><th data-i18n="cmp.r2">การใช้งาน</th><td data-i18n="cmp.o2">ต้องเขียนคำสั่งและ Query ทางเทคนิคที่ซับซ้อน</td><td class="is-cybot" data-i18n="cmp.n2">ถาม-สั่งงานด้วยภาษาธรรมชาติ ไทย/อังกฤษ</td></tr>
+          <tr><th data-i18n="cmp.r3">การวิเคราะห์</th><td data-i18n="cmp.o3">ดู Log ดิบแล้วสรุปเอง ใช้เวลานาน</td><td class="is-cybot" data-i18n="cmp.n3">AI วิเคราะห์ ให้เหตุผล พร้อมคำแนะนำแก้ไข</td></tr>
+          <tr><th data-i18n="cmp.r4">Compliance Report</th><td data-i18n="cmp.o4">Mapping และจัดทำรายงานด้วยมือ</td><td class="is-cybot" data-i18n="cmp.n4">Mapping อัตโนมัติ พร้อม Compliance Rationale</td></tr>
+          <tr><th data-i18n="cmp.r5">ข้อมูลและความเป็นส่วนตัว</th><td data-i18n="cmp.o5">พึ่งพา Cloud มีความเสี่ยงข้อมูลรั่วไหล</td><td class="is-cybot" data-i18n="cmp.n5">On-Premise 100% ข้อมูลไม่ออกนอกองค์กร</td></tr>
+          <tr><th data-i18n="cmp.r6">การทำงานอัตโนมัติ</th><td data-i18n="cmp.o6">รอคนสั่งงานทีละขั้นตอน</td><td class="is-cybot" data-i18n="cmp.n6">Agentic AI วางแผนและลงมือทำ ภายใต้ Human-in-the-Loop</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIALS & CASE STUDY ══════════════ -->
+<!-- หมายเหตุ: ข้อความรีวิวและ Case Study ด้านล่างเป็นข้อมูลตัวอย่าง (sample) — แทนที่ด้วยข้อมูลลูกค้าจริงก่อนเผยแพร่ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="ts.label">Social Proof</span>
+      <h2 class="section-title" data-i18n="ts.title">เสียงจากผู้ใช้งานและพาร์ตเนอร์</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card t-card reveal">
+        <svg class="t-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H6.5C6.8 8.9 8.2 8 10 8V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3.5c.3-1.1 1.7-2 3.5-2V7z"/></svg>
+        <p class="t-text" data-i18n="ts.t1">ทีมตอบคำถามผู้บริหารได้ทันที — ถาม CYBOT เป็นภาษาไทยแล้วได้กราฟและคำอธิบายพร้อมใช้ รายงานที่เคยใช้เวลาครึ่งวัน เหลือเพียงไม่กี่นาที</p>
+        <footer class="t-by"><span class="t-avatar">IT</span><span class="t-attr" data-i18n="ts.a1">IT Manager — องค์กรด้านการเงิน</span></footer>
+      </article>
+      <article class="card t-card reveal">
+        <svg class="t-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H6.5C6.8 8.9 8.2 8 10 8V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3.5c.3-1.1 1.7-2 3.5-2V7z"/></svg>
+        <p class="t-text" data-i18n="ts.t2">Compliance Mapping กับ PDPA และ พ.ร.บ. คอมพิวเตอร์ ช่วยลดเวลาตอบผู้ตรวจสอบได้อย่างมาก เพราะเหตุผลความสอดคล้องมีพร้อมในระบบ</p>
+        <footer class="t-by"><span class="t-avatar">CS</span><span class="t-attr" data-i18n="ts.a2">CISO — หน่วยงานภาครัฐ</span></footer>
+      </article>
+      <article class="card t-card reveal">
+        <svg class="t-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H6.5C6.8 8.9 8.2 8 10 8V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3.5c.3-1.1 1.7-2 3.5-2V7z"/></svg>
+        <p class="t-text" data-i18n="ts.t3">เป็นโซลูชันที่นำเสนอลูกค้าได้ทันที — ครบมาตรฐาน ติดตั้งง่าย ส่งมอบเร็ว ปิดงานได้ภายในเวลาอันสั้น</p>
+        <footer class="t-by"><span class="t-avatar">SI</span><span class="t-attr" data-i18n="ts.a3">Director — บริษัท System Integrator</span></footer>
+      </article>
+    </div>
+    <div class="case-card card reveal">
+      <div class="case-story">
+        <h3 data-i18n="ts.cs.title">Case Study — จาก Tool-Based สู่ AI-Assisted IT</h3>
+        <ol class="case-steps">
+          <li>
+            <h4 data-i18n="ts.cs.s1t">สถานการณ์</h4>
+            <p data-i18n="ts.cs.s1d">Log และเหตุการณ์ความปลอดภัยจำนวนมหาศาล ทีม IT มีเวลาจำกัด และต้องเตรียมพร้อมตอบผู้ตรวจสอบตาม พ.ร.บ.</p>
+          </li>
+          <li>
+            <h4 data-i18n="ts.cs.s2t">แนวทาง</h4>
+            <p data-i18n="ts.cs.s2d">ติดตั้ง CYBOT เป็น Appliance เดียวในองค์กร เก็บ Log ตามมาตรฐาน และให้ทีมสั่งงานด้วยภาษาธรรมชาติ</p>
+          </li>
+          <li>
+            <h4 data-i18n="ts.cs.s3t">ผลลัพธ์</h4>
+            <p data-i18n="ts.cs.s3d">สอบสวนเหตุการณ์เร็วขึ้น รายงาน Compliance พร้อมใช้ และผู้บริหารเห็นความเสี่ยงของระบบในหน้าเดียว</p>
+          </li>
+        </ol>
+      </div>
+      <div class="case-metrics">
+        <div class="case-metric"><span class="case-num">-70%</span><span class="case-lab" data-i18n="ts.cs.m1">เวลาสอบสวนเหตุการณ์ลดลง</span></div>
+        <div class="case-metric"><span class="case-num">0</span><span class="case-lab" data-i18n="ts.cs.m2">การพึ่งพา Cloud ภายนอก</span></div>
+        <div class="case-metric"><span class="case-num">7+</span><span class="case-lab" data-i18n="ts.cs.m3">มาตรฐานที่ครอบคลุม</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -669,6 +693,50 @@
   </div>
 </section>
 
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label" data-i18n="faq.label">FAQ</span>
+      <h2 class="section-title" data-i18n="faq.title">คำถามที่พบบ่อย</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary data-i18n="faq.q1">CYBOT เหมาะกับองค์กรขนาดใด</summary>
+        <p data-i18n="faq.a1">รองรับตั้งแต่องค์กรขนาดกลางถึงองค์กรขนาดใหญ่ ด้วยลิขสิทธิ์แบบ Unlimited Devices และ Unlimited Volume ไม่จำกัดจำนวนอุปกรณ์หรือปริมาณ Log ต่อวัน</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q2">ติดตั้งและเริ่มใช้งานใช้เวลานานเท่าใด</summary>
+        <p data-i18n="faq.a2">CYBOT เป็น Hardware Appliance แบบ All-in-One ต่อเข้ากับเครือข่ายองค์กรแล้วเริ่มเก็บ Log ได้ทันที (Ready On-Premise) ไม่ต้องติดตั้งซอฟต์แวร์หรืออินทิเกรตหลายส่วน</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q3">รองรับอุปกรณ์และระบบใดบ้าง</summary>
+        <p data-i18n="faq.a3">รองรับ Syslog ผ่าน UDP/TCP/TLS จากอุปกรณ์เครือข่าย เซิร์ฟเวอร์ และระบบต่าง ๆ พร้อม SNMP/ICMP สำหรับการมอนิเตอร์ และ Built-in Parser สำหรับ KV, CSV, GROK, JSON</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q4">CYBOT ใช้แทน SIEM เดิมได้หรือไม่</summary>
+        <p data-i18n="faq.a4">ได้ — CYBOT รวม Log Management, Security Monitor และ IT Inventory ในอุปกรณ์เดียว และยังรองรับ Log Forwarding ไปยัง SIEM เดิมได้ด้วยหากต้องการใช้งานร่วมกัน</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q5">ข้อมูลถูกส่งออกนอกองค์กรหรือไม่</summary>
+        <p data-i18n="faq.a5">ไม่ — ทุกอย่างประมวลผลและจัดเก็บภายในองค์กร 100% (On-Premise) รวมถึง AI Engine (Softnix LLM) ที่ทำงานบน Local AI Server ข้อมูลไม่ถูกส่งออกสู่ Cloud โดยเด็ดขาด</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q6">มีค่าใช้จ่ายเพิ่มตามจำนวนอุปกรณ์หรือปริมาณ Log หรือไม่</summary>
+        <p data-i18n="faq.a6">ไม่มี — ลิขสิทธิ์เป็นแบบ Unlimited Devices และ Unlimited Volume ประมวลผลได้ไม่น้อยกว่า 7,000 EPS (เพิ่มได้ตามความต้องการ ปรึกษาทีมงานได้)</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q7">มีบริการหลังการขายและ MA อย่างไร</summary>
+        <p data-i18n="faq.a7">Softnix และตัวแทนจำหน่ายที่ได้รับการแต่งตั้งให้บริการติดตั้ง อบรม และ MA ครอบคลุมการอัปเดตและซัพพอร์ต ติดต่อทีมงานเพื่อสอบถามแพ็กเกจที่เหมาะสม</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q8">ขอทดสอบระบบ (POC) ได้อย่างไร</summary>
+        <p data-i18n="faq.a8">ติดต่อผ่านหน้า Contact ของ Softnix หรือตัวแทนจำหน่ายที่ได้รับการแต่งตั้ง เพื่อจัดเตรียม Proof of Concept ให้องค์กรของคุณโดยไม่มีค่าใช้จ่าย</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ CTA / CONTACT ══════════════ -->
 <section class="section cta-section" id="contact">
   <div class="cta-bg" aria-hidden="true"><div class="hero-glow glow-c"></div></div>
@@ -681,7 +749,11 @@
         <div class="cta-actions">
           <a href="https://www.softnix.co.th/contact/" target="_blank" rel="noopener" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span data-i18n="cta.btn1">ขอ Demo — sales@softnix.co.th</span>
+            <span data-i18n="cta.btn1">ขอ Demo / ใบเสนอราคา</span>
+          </a>
+          <a href="https://www.softnix.co.th/contact/" target="_blank" rel="noopener" class="btn btn-poc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <span data-i18n="cta.poc">ขอ Proof of Concept ฟรี</span>
           </a>
           <div class="cta-docs">
             <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost btn-sm" data-i18n="cta.docTH">Datasheet (TH)</a>
