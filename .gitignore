@@ -1,0 +1,21 @@
+# ── Source / raw assets (processed versions live in assets/) ──
+CYBOT_logo_mascot/
+Screenshot/
+Softnix_Logger_CYBOT_Datasheet.pdf
+Softnix_Logger_CYBOT_Datasheet_EN.pdf
+Softnix CYBOT Overview.pptx
+
+# ── OS / editor ──
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ── Node / tooling ──
+node_modules/
+package-lock.json
+
+# ── Local server / logs ──
+*.log
+nohup.out
