@@ -305,6 +305,12 @@ button { font-family: inherit; cursor: pointer; }
   font-size: clamp(28px, 3.6vw, 42px); line-height: 1.25; letter-spacing: -0.01em;
 }
 .section-lead { color: var(--text-muted); font-size: 16.5px; margin-top: 18px; }
+.nts-note {
+  margin-top: 14px; font-size: 13px; color: var(--text-dim); line-height: 1.6;
+  padding: 10px 16px; border-left: 2px solid rgba(63, 214, 239, .4);
+  background: rgba(63, 214, 239, .05); border-radius: 0 8px 8px 0;
+  display: inline-block; text-align: left;
+}
 
 /* ═══════════ CARDS ═══════════ */
 .grid { display: grid; gap: 22px; }

@@ -11,7 +11,7 @@
 const I18N = {
   th: {
     'meta.title': 'Softnix Logger CYBOT — ผู้ช่วยอัจฉริยะด้าน IT & Cyber Security แบบ On-Premise AI Appliance',
-    'meta.desc': 'Softnix Logger CYBOT ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์แบบ Agentic AI ทำงานภายในองค์กร 100% รวม Log Management มาตรฐาน NTS 4003.1-2560, ตรวจช่องโหว่, เฝ้าระวังเชิงรุก และบริหารทรัพย์สิน IT ในอุปกรณ์เดียว',
+    'meta.desc': 'Softnix Logger CYBOT ผู้ช่วยอัจฉริยะด้าน IT และความมั่นคงปลอดภัยไซเบอร์แบบ Agentic AI ทำงานภายในองค์กร 100% รวม Log Management มาตรฐาน NTS 4003.1-2560 (ติดตั้ง Softnix Logger v7), ตรวจช่องโหว่, เฝ้าระวังเชิงรุก และบริหารทรัพย์สิน IT ในอุปกรณ์เดียว',
 
     'nav.overview': 'ภาพรวม',
     'nav.ai': 'AI ผู้ช่วย',
@@ -46,7 +46,7 @@ const I18N = {
     'ov.f2t': 'Security Scan & Advisor',
     'ov.f2d': 'ตรวจสอบและสแกนช่องโหว่ความปลอดภัย พร้อมแนะนำแนวทางแก้ไข ทำหน้าที่เป็นที่ปรึกษาด้านความปลอดภัยระดับมืออาชีพ',
     'ov.f3t': 'Log Compliance',
-    'ov.f3d': 'จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560 รองรับ พ.ร.บ.คอมพิวเตอร์, PDPA และ ISO 27001',
+    'ov.f3d': 'จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560* รองรับ พ.ร.บ.คอมพิวเตอร์, PDPA และ ISO 27001',
     'ov.f4t': 'Proactive Monitor',
     'ov.f4d': 'เฝ้าสังเกตระบบ IT แจ้งเตือนทันทีโดยไม่ต้องรอคำสั่ง พร้อมคำอธิบายวิธีแก้ปัญหา',
     'ov.looptitle': 'วงจรการทำงานแบบ Agentic AI',
@@ -114,8 +114,8 @@ const I18N = {
     'mon.cap3': 'วิเคราะห์สาเหตุปัญหาระบบด้วย AI ควบคู่กับกราฟมอนิเตอร์แบบเรียลไทม์',
 
     'log.label': 'Log Management & Analytics',
-    'log.title': 'จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560',
-    'log.lead': 'แกนหลักด้านการจัดเก็บ Log ที่ผ่านการรับรองคุณสมบัติตามมาตรฐาน “ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์” NTS 4003.1-2560 รองรับปริมาณสูงพร้อมรักษาความถูกต้องของข้อมูลอย่างครบถ้วน',
+    'log.title': 'จัดเก็บ Log ตามมาตรฐาน NTS 4003.1-2560*',
+    'log.lead': 'แกนหลักด้านการจัดเก็บ Log ที่ผ่านการรับรองคุณสมบัติตามมาตรฐาน “ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์” NTS 4003.1-2560* รองรับปริมาณสูงพร้อมรักษาความถูกต้องของข้อมูลอย่างครบถ้วน',
     'log.f1t': 'Syslog Protocol',
     'log.f1d': 'รับ–ส่ง Log ผ่าน UDP, TCP และเข้ารหัสด้วย TLS เพื่อความปลอดภัย',
     'log.f2t': 'Log Integrity',
@@ -175,7 +175,7 @@ const I18N = {
     'spec.r4k': 'Log Storage / Archive',
     'spec.r4v': '1TB – 2TB · Archive Log 90 วัน (เรียกดูย้อนหลังได้)',
     'spec.r5k': 'มาตรฐานจัดเก็บ Log',
-    'spec.r5v': 'NTS 4003.1-2560 (ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์)',
+    'spec.r5v': 'NTS 4003.1-2560* (ระบบเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์) — ติดตั้ง Softnix Logger v7',
     'spec.r6k': 'Log Ingestion',
     'spec.r6v': 'Syslog ผ่าน UDP / TCP / TLS',
     'spec.r7k': 'Log Integrity',
@@ -197,7 +197,7 @@ const I18N = {
     'spec.r15k': 'Report Export',
     'spec.r15v': 'PDF · CSV · Excel',
     'spec.r16k': 'Compliance',
-    'spec.r16v': 'PDPA · พ.ร.บ.ไซเบอร์ · ISO 27001 · NTS 4003.1-2560 · NIST · PCI-DSS · GDPR',
+    'spec.r16v': 'PDPA · พ.ร.บ.ไซเบอร์ · ISO 27001 · NTS 4003.1-2560* · NIST · PCI-DSS · GDPR — *ติดตั้ง Softnix Logger v7',
     'spec.r17k': 'Deployment',
     'spec.r17v': '100% On-Premise · Softnix LLM · Softnix Private Cloud',
 
@@ -257,12 +257,13 @@ const I18N = {
     'faq.a8': 'ติดต่อผ่านหน้า Contact ของ Softnix หรือตัวแทนจำหน่ายที่ได้รับการแต่งตั้ง เพื่อจัดเตรียม Proof of Concept ให้องค์กรของคุณโดยไม่มีค่าใช้จ่าย',
 
     'cta.poc': 'ขอ Proof of Concept ฟรี',
+    'log.note': '* (หมายเหตุ: รองรับมาตรฐาน NTS 4003.1-2560 เมื่อติดตั้ง Softnix Logger v7)',
     'footer.copy': '© 2026 Softnix Technology Co., Ltd. สงวนลิขสิทธิ์',
   },
 
   en: {
     'meta.title': 'Softnix Logger CYBOT — On-Premise AI Appliance for IT & Cyber Security',
-    'meta.desc': 'Softnix Logger CYBOT is an Agentic-AI IT & cyber-security assistant that runs 100% on-premise — unifying NTS 4003.1-2560 certified log management, vulnerability assessment, proactive monitoring and IT asset management in a single appliance.',
+    'meta.desc': 'Softnix Logger CYBOT is an Agentic-AI IT & cyber-security assistant that runs 100% on-premise — unifying NTS 4003.1-2560 certified log management (requires Softnix Logger v7), vulnerability assessment, proactive monitoring and IT asset management in a single appliance.',
 
     'nav.overview': 'Overview',
     'nav.ai': 'AI Assistant',
@@ -297,7 +298,7 @@ const I18N = {
     'ov.f2t': 'Security Scan & Advisor',
     'ov.f2d': 'Scan for vulnerabilities and assess security posture with remediation guidance — acting as your professional security advisor.',
     'ov.f3t': 'Log Compliance',
-    'ov.f3d': 'Store logs to the NTS 4003.1-2560 standard, supporting the Computer Act, PDPA and ISO 27001.',
+    'ov.f3d': 'Store logs to the NTS 4003.1-2560* standard, supporting the Computer Act, PDPA and ISO 27001.',
     'ov.f4t': 'Proactive Monitor',
     'ov.f4d': 'Observe the IT environment with instant alerts — no command required — plus clear remediation guidance.',
     'ov.looptitle': 'The Agentic AI Loop',
@@ -365,8 +366,8 @@ const I18N = {
     'mon.cap3': 'AI-assisted root-cause analysis alongside real-time monitoring graphs.',
 
     'log.label': 'Log Management & Analytics',
-    'log.title': 'Log Retention Certified to NTS 4003.1-2560',
-    'log.lead': 'The core log-management engine is certified to the “Computer Traffic Data Retention System” standard NTS 4003.1-2560 — supporting high volumes while preserving full data integrity.',
+    'log.title': 'Log Retention Certified to NTS 4003.1-2560*',
+    'log.lead': 'The core log-management engine is certified to the “Computer Traffic Data Retention System” standard NTS 4003.1-2560* — supporting high volumes while preserving full data integrity.',
     'log.f1t': 'Syslog Protocol',
     'log.f1d': 'Receive and send logs over UDP, TCP and encrypted TLS for secure transport.',
     'log.f2t': 'Log Integrity',
@@ -426,7 +427,7 @@ const I18N = {
     'spec.r4k': 'Log Storage / Archive',
     'spec.r4v': '1TB – 2TB · 90-day Log Archive (retrievable)',
     'spec.r5k': 'Log Retention Standard',
-    'spec.r5v': 'NTS 4003.1-2560 (Computer Traffic Data Retention System)',
+    'spec.r5v': 'NTS 4003.1-2560* (Computer Traffic Data Retention System) — requires Softnix Logger v7',
     'spec.r6k': 'Log Ingestion',
     'spec.r6v': 'Syslog over UDP / TCP / TLS',
     'spec.r7k': 'Log Integrity',
@@ -448,7 +449,7 @@ const I18N = {
     'spec.r15k': 'Report Export',
     'spec.r15v': 'PDF · CSV · Excel',
     'spec.r16k': 'Compliance',
-    'spec.r16v': 'PDPA · Cybersecurity Act · ISO 27001 · NTS 4003.1-2560 · NIST · PCI-DSS · GDPR',
+    'spec.r16v': 'PDPA · Cybersecurity Act · ISO 27001 · NTS 4003.1-2560* · NIST · PCI-DSS · GDPR — *requires Softnix Logger v7',
     'spec.r17k': 'Deployment',
     'spec.r17v': '100% On-Premise · Softnix LLM · Softnix Private Cloud',
 
@@ -508,6 +509,7 @@ const I18N = {
     'faq.a8': 'Contact Softnix via the Contact page or an authorized reseller to set up a free Proof of Concept for your organization.',
 
     'cta.poc': 'Request a Free POC',
+    'log.note': '* (Note: NTS 4003.1-2560 compliance requires Softnix Logger v7)',
     'footer.copy': '© 2026 Softnix Technology Co., Ltd. All rights reserved.',
   },
 };
