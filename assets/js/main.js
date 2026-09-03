@@ -203,7 +203,7 @@ const I18N = {
 
     'cta.title': 'พร้อมให้ CYBOT เป็นผู้ช่วยทีม IT ของคุณแล้วหรือยัง',
     'cta.lead': 'สนใจทดสอบระบบหรือขอใบเสนอราคา ติดต่อ Softnix Technology หรือตัวแทนจำหน่ายที่ได้รับการแต่งตั้ง',
-    'cta.btn1': 'ขอ Demo / ใบเสนอราคา',
+    'cta.btn1': 'ขอใบเสนอราคา',
     'cta.docTH': 'Datasheet (TH)',
     'cta.docEN': 'Datasheet (EN)',
 'hero.tagline': 'รวม Log Management, Security และ Monitoring ครบในอุปกรณ์เดียว — สั่งงานด้วยภาษาไทยได้ทันที',
@@ -457,7 +457,7 @@ const I18N = {
 
     'cta.title': 'Ready to see CYBOT in action?',
     'cta.lead': 'To arrange a demo or request a quotation, contact Softnix Technology or an authorized reseller.',
-    'cta.btn1': 'Request Demo / Quote',
+    'cta.btn1': 'Request a Quote',
     'cta.docTH': 'Datasheet (TH)',
     'cta.docEN': 'Datasheet (EN)',
 'hero.tagline': 'Log Management, Security & Monitoring in a single appliance — ask in plain language, act instantly',
@@ -749,22 +749,33 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
 (function () {
   const HS_PORTAL = '7556917';
   const HS_REGION = 'na1';
-  const HS_FORM = { th: '1649c3be-463e-4c22-ba26-8e39ee837b5c', en: 'a8804ba2-eca7-46ae-97c2-535ac1292b24' };
+  const HS_FORM = {
+    demo: 'f6e04ff4-5ef3-4e65-9396-7df3eb4cf78e',
+    quote: 'f6e04ff4-5ef3-4e65-9396-7df3eb4cf78e',
+    poc: '',
+    datasheet: { th: '1649c3be-463e-4c22-ba26-8e39ee837b5c', en: 'a8804ba2-eca7-46ae-97c2-535ac1292b24' },
+  };
 
   const COPY = {
     th: {
       datasheet: { title: 'ดาวน์โหลด Softnix Logger CYBOT Datasheet', sub: 'กรอกแบบฟอร์มสั้นๆ แล้วระบบจะเปิดไฟล์ Datasheet ให้ดาวน์โหลด' },
       demo: { title: 'ขอ Demo Softnix Logger CYBOT', sub: 'กรอกแบบฟอร์มสั้นๆ ทีม Softnix จะติดต่อกลับเพื่อนัด Demo' },
+      quote: { title: 'ขอใบเสนอราคา Softnix Logger CYBOT', sub: 'กรอกแบบฟอร์มสั้นๆ ทีม Softnix จะติดต่อกลับเรื่องใบเสนอราคา' },
+      poc: { title: 'ขอ Proof of Concept ฟรี', sub: 'กรอกแบบฟอร์มสั้นๆ ทีม Softnix จะติดต่อกลับเพื่อจัด PoC' },
       note: 'ข้อมูลใช้เพื่อติดต่อกลับจาก Softnix เท่านั้น',
       loading: 'กำลังโหลดแบบฟอร์ม…',
       error: 'โหลดแบบฟอร์มไม่สำเร็จ กรุณาลองใหม่ หรือติดต่อ sales@softnix.co.th',
+      missing: 'ยังไม่ได้ตั้งค่าแบบฟอร์ม PoC กรุณาติดต่อ sales@softnix.co.th',
     },
     en: {
       datasheet: { title: 'Download the Softnix Logger CYBOT Datasheet', sub: "Fill in this short form and we'll open the datasheet for download." },
       demo: { title: 'Request a Softnix Logger CYBOT Demo', sub: 'Fill in this short form and the Softnix team will contact you to schedule a demo.' },
+      quote: { title: 'Request a Softnix Logger CYBOT quotation', sub: 'Fill in this short form and the Softnix team will follow up with a quotation.' },
+      poc: { title: 'Request a Free Proof of Concept', sub: 'Fill in this short form and the Softnix team will contact you to arrange a PoC.' },
       note: 'Your details are used only for Softnix follow-up.',
       loading: 'Loading form…',
       error: 'Failed to load the form. Please retry or contact sales@softnix.co.th',
+      missing: 'The PoC form is not configured yet. Please contact sales@softnix.co.th',
     },
   };
 
@@ -836,14 +847,24 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
     a.remove();
   }
 
+  function formIdFor(mode, l) {
+    if (mode === 'datasheet') return (HS_FORM.datasheet[l] || HS_FORM.datasheet.th);
+    return HS_FORM[mode] || '';
+  }
+
   function renderForm(mode, l) {
     const copy = COPY[l] || COPY.th;
+    const formId = formIdFor(mode, l);
+    if (!formId) {
+      formHost.innerHTML = `<p class="lead-dl-form-error">${copy.missing}</p>`;
+      return;
+    }
     formHost.innerHTML = `<p class="lead-dl-form-loading">${copy.loading}</p>`;
     loadHubSpotScript().then(() => {
       formHost.innerHTML = '';
       window.hbspt.forms.create({
         portalId: HS_PORTAL,
-        formId: HS_FORM[l] || HS_FORM.th,
+        formId: formId,
         region: HS_REGION,
         target: '#leadHsForm',
         onFormSubmitted: () => {
@@ -856,9 +877,9 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
     });
   }
 
-  function openLeadModal(mode) {
+  function openLeadModal(mode, langOverride) {
     ensureModal();
-    const l = lang();
+    const l = (langOverride === 'en' || langOverride === 'th') ? langOverride : lang();
     const copy = COPY[l] || COPY.th;
     const c = copy[mode] || copy.datasheet;
     modal.querySelector('#leadModalTitle').textContent = c.title;
@@ -866,7 +887,7 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
     modal.querySelector('#leadModalNote').textContent = copy.note;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
-    const key = mode + ':' + l;
+    const key = mode + ':' + l + ':' + formIdFor(mode, l);
     if (createdForMode !== key) {
       createdForMode = key;
       renderForm(mode, l);
@@ -882,13 +903,25 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
   document.querySelectorAll('.js-datasheet-modal').forEach((el) => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
-      openLeadModal('datasheet');
+      openLeadModal('datasheet', el.getAttribute('data-lead-lang'));
     });
   });
   document.querySelectorAll('.js-demo-modal').forEach((el) => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
       openLeadModal('demo');
+    });
+  });
+  document.querySelectorAll('.js-quote-modal').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal('quote');
+    });
+  });
+  document.querySelectorAll('.js-poc-modal').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal('poc');
     });
   });
 })();
