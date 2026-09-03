@@ -716,3 +716,50 @@ button { font-family: inherit; cursor: pointer; }
   .lightbox-nav { display: none; }
   .cta-card { padding: 30px 22px; }
 }
+
+/* ---------------- Lead-gated modal (Datasheet download / Demo request) ---------------- */
+.lead-dl-modal {
+  position: fixed; inset: 0; z-index: 400;
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.lead-dl-modal.open { display: flex; }
+.lead-dl-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(5, 8, 15, .82);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.lead-dl-dialog {
+  position: relative; z-index: 1;
+  width: min(480px, 100%);
+  max-height: min(90vh, 720px);
+  overflow: auto;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 28px 24px 24px;
+}
+.lead-dl-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg-2); color: var(--text);
+  display: grid; place-items: center; cursor: pointer;
+}
+.lead-dl-close:hover { background: var(--card-hover); border-color: var(--accent); color: var(--accent); }
+.lead-dl-title {
+  margin: 0 36px 8px 0;
+  font-size: 1.25rem; font-weight: 700; color: var(--text); line-height: 1.35;
+  font-family: var(--font-display);
+}
+.lead-dl-sub {
+  margin: 0 0 18px; font-size: .92rem; color: var(--text-muted); line-height: 1.55;
+}
+.lead-dl-form { min-height: 120px; }
+.lead-dl-form iframe { max-width: 100% !important; }
+.lead-dl-form-loading, .lead-dl-form-error { text-align: center; padding: 40px 0; font-size: .92rem; }
+.lead-dl-form-loading { color: var(--text-muted); }
+.lead-dl-form-error { color: var(--danger); }
+.lead-dl-note {
+  margin: 14px 0 0; font-size: .78rem; color: var(--text-dim);
+}

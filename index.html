@@ -48,7 +48,7 @@
           <button type="button" data-lang="th" class="lang-btn active">TH</button>
           <button type="button" data-lang="en" class="lang-btn">EN</button>
         </div>
-        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">ขอ Demo</a>
+        <a href="#contact" class="btn btn-primary btn-sm js-demo-modal" data-i18n="nav.cta">ขอ Demo</a>
       </div>
     </nav>
     <div class="nav-actions">
@@ -56,7 +56,7 @@
         <button type="button" data-lang="th" class="lang-btn active">TH</button>
         <button type="button" data-lang="en" class="lang-btn">EN</button>
       </div>
-      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">ขอ Demo</a>
+      <a href="#contact" class="btn btn-primary btn-sm js-demo-modal" data-i18n="nav.cta">ขอ Demo</a>
       <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -91,11 +91,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13a1 1 0 001.54.84l11-6.5a1 1 0 000-1.68l-11-6.5A1 1 0 008 5.5z"/></svg>
           <span data-i18n="hero.cta1">ชม Demo</span>
         </button>
-        <a href="https://www.softnix.co.th/contact/" target="_blank" rel="noopener" class="btn btn-poc">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-          <span data-i18n="hero.ctapoc">ขอ Proof of Concept ฟรี</span>
-        </a>
-        <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" target="_blank" class="btn btn-ghost btn-sm" id="datasheetBtn">
+        <a href="assets/docs/Softnix_Logger_CYBOT_Datasheet_TH.pdf" id="datasheetBtn" class="btn btn-poc js-datasheet-modal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
           <span data-i18n="hero.cta2">ดาวน์โหลด Datasheet</span>
         </a>

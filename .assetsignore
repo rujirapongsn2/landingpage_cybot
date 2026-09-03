@@ -1,0 +1,13 @@
+/.git
+/.wrangler
+/.gitignore
+/.assetsignore
+/wrangler.jsonc
+/.DS_Store
+/node_modules
+/README.md
+/CYBOT_logo_mascot
+/Screenshot
+/Softnix CYBOT Overview.pptx
+/Softnix_Logger_CYBOT_Datasheet.pdf
+/Softnix_Logger_CYBOT_Datasheet_EN.pdf

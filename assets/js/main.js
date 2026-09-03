@@ -743,3 +743,153 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+/* ═══════════════════════════════════════════════════════
+   9. HUBSPOT LEAD-GATED MODAL — Download Datasheet (Hero) + Request Demo (Nav)
+   ═══════════════════════════════════════════════════════ */
+(function () {
+  const HS_PORTAL = '7556917';
+  const HS_REGION = 'na1';
+  const HS_FORM = { th: '1649c3be-463e-4c22-ba26-8e39ee837b5c', en: 'a8804ba2-eca7-46ae-97c2-535ac1292b24' };
+
+  const COPY = {
+    th: {
+      datasheet: { title: 'ดาวน์โหลด Softnix Logger CYBOT Datasheet', sub: 'กรอกแบบฟอร์มสั้นๆ แล้วระบบจะเปิดไฟล์ Datasheet ให้ดาวน์โหลด' },
+      demo: { title: 'ขอ Demo Softnix Logger CYBOT', sub: 'กรอกแบบฟอร์มสั้นๆ ทีม Softnix จะติดต่อกลับเพื่อนัด Demo' },
+      note: 'ข้อมูลใช้เพื่อติดต่อกลับจาก Softnix เท่านั้น',
+      loading: 'กำลังโหลดแบบฟอร์ม…',
+      error: 'โหลดแบบฟอร์มไม่สำเร็จ กรุณาลองใหม่ หรือติดต่อ sales@softnix.co.th',
+    },
+    en: {
+      datasheet: { title: 'Download the Softnix Logger CYBOT Datasheet', sub: "Fill in this short form and we'll open the datasheet for download." },
+      demo: { title: 'Request a Softnix Logger CYBOT Demo', sub: 'Fill in this short form and the Softnix team will contact you to schedule a demo.' },
+      note: 'Your details are used only for Softnix follow-up.',
+      loading: 'Loading form…',
+      error: 'Failed to load the form. Please retry or contact sales@softnix.co.th',
+    },
+  };
+
+  let modal, formHost, hsReady = null, createdForMode = null;
+
+  function lang() {
+    const l = document.documentElement.lang;
+    return l === 'en' ? 'en' : 'th';
+  }
+
+  function ensureModal() {
+    if (modal) return modal;
+    modal = document.createElement('div');
+    modal.className = 'lead-dl-modal';
+    modal.id = 'leadModal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-labelledby', 'leadModalTitle');
+    modal.innerHTML =
+      '<div class="lead-dl-backdrop" data-lead-close="1"></div>' +
+      '<div class="lead-dl-dialog">' +
+      '  <button type="button" class="lead-dl-close" data-lead-close="1" aria-label="Close">' +
+      '    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
+      '  </button>' +
+      '  <h2 class="lead-dl-title" id="leadModalTitle"></h2>' +
+      '  <p class="lead-dl-sub" id="leadModalSub"></p>' +
+      '  <div class="lead-dl-form" id="leadHsForm"></div>' +
+      '  <p class="lead-dl-note" id="leadModalNote"></p>' +
+      '</div>';
+    document.body.appendChild(modal);
+    formHost = modal.querySelector('#leadHsForm');
+    modal.addEventListener('click', (e) => {
+      if (e.target && e.target.getAttribute('data-lead-close')) closeLeadModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeLeadModal();
+    });
+    return modal;
+  }
+
+  function loadHubSpotScript() {
+    if (window.hbspt && window.hbspt.forms) return Promise.resolve();
+    if (hsReady) return hsReady;
+    hsReady = new Promise((resolve, reject) => {
+      const existing = document.querySelector('script[src*="js.hsforms.net/forms/embed"]');
+      if (existing) {
+        if (window.hbspt && window.hbspt.forms) { resolve(); return; }
+        existing.addEventListener('load', () => resolve());
+        existing.addEventListener('error', reject);
+        return;
+      }
+      const s = document.createElement('script');
+      s.charset = 'utf-8';
+      s.src = 'https://js.hsforms.net/forms/embed/v2.js';
+      s.onload = () => resolve();
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+    return hsReady;
+  }
+
+  function openPdf(url) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function renderForm(mode, l) {
+    const copy = COPY[l] || COPY.th;
+    formHost.innerHTML = `<p class="lead-dl-form-loading">${copy.loading}</p>`;
+    loadHubSpotScript().then(() => {
+      formHost.innerHTML = '';
+      window.hbspt.forms.create({
+        portalId: HS_PORTAL,
+        formId: HS_FORM[l] || HS_FORM.th,
+        region: HS_REGION,
+        target: '#leadHsForm',
+        onFormSubmitted: () => {
+          if (mode === 'datasheet') openPdf(DATASHEET[l] || DATASHEET.th);
+          setTimeout(closeLeadModal, mode === 'datasheet' ? 600 : 1200);
+        },
+      });
+    }).catch(() => {
+      formHost.innerHTML = `<p class="lead-dl-form-error">${copy.error}</p>`;
+    });
+  }
+
+  function openLeadModal(mode) {
+    ensureModal();
+    const l = lang();
+    const copy = COPY[l] || COPY.th;
+    const c = copy[mode] || copy.datasheet;
+    modal.querySelector('#leadModalTitle').textContent = c.title;
+    modal.querySelector('#leadModalSub').textContent = c.sub;
+    modal.querySelector('#leadModalNote').textContent = copy.note;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    const key = mode + ':' + l;
+    if (createdForMode !== key) {
+      createdForMode = key;
+      renderForm(mode, l);
+    }
+  }
+
+  function closeLeadModal() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.js-datasheet-modal').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal('datasheet');
+    });
+  });
+  document.querySelectorAll('.js-demo-modal').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal('demo');
+    });
+  });
+})();
+
