@@ -734,8 +734,7 @@ button { font-family: inherit; cursor: pointer; }
   width: min(480px, 100%);
   max-height: min(90vh, 720px);
   overflow: auto;
-  background: var(--bg-2);
-  border: 1px solid var(--border);
+  background: #ffffff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   padding: 28px 24px 24px;
@@ -743,23 +742,23 @@ button { font-family: inherit; cursor: pointer; }
 .lead-dl-close {
   position: absolute; top: 12px; right: 12px;
   width: 36px; height: 36px; border-radius: 50%;
-  border: 1px solid var(--border); background: var(--bg-2); color: var(--text);
+  border: 1px solid #D6E3EE; background: #ffffff; color: #0F2A44;
   display: grid; place-items: center; cursor: pointer;
 }
-.lead-dl-close:hover { background: var(--card-hover); border-color: var(--accent); color: var(--accent); }
+.lead-dl-close:hover { background: #F0F6FB; border-color: var(--accent-3); color: var(--accent-3); }
 .lead-dl-title {
   margin: 0 36px 8px 0;
-  font-size: 1.25rem; font-weight: 700; color: var(--text); line-height: 1.35;
+  font-size: 1.25rem; font-weight: 700; color: #0F2A44; line-height: 1.35;
   font-family: var(--font-display);
 }
 .lead-dl-sub {
-  margin: 0 0 18px; font-size: .92rem; color: var(--text-muted); line-height: 1.55;
+  margin: 0 0 18px; font-size: .92rem; color: #5B6B7C; line-height: 1.55;
 }
 .lead-dl-form { min-height: 120px; }
 .lead-dl-form iframe { max-width: 100% !important; }
 .lead-dl-form-loading, .lead-dl-form-error { text-align: center; padding: 40px 0; font-size: .92rem; }
-.lead-dl-form-loading { color: var(--text-muted); }
-.lead-dl-form-error { color: var(--danger); }
+.lead-dl-form-loading { color: #5B6B7C; }
+.lead-dl-form-error { color: #c0392b; }
 .lead-dl-note {
-  margin: 14px 0 0; font-size: .78rem; color: var(--text-dim);
+  margin: 14px 0 0; font-size: .78rem; color: #8A9AAB;
 }
